@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Yasiru Lokesha">
+    <link rel="stylesheet" type="text/css" href="styles/common.css">
+    <link rel="stylesheet" type="text/css" href="styles/apply.css">
+    <script src="https://kit.fontawesome.com/0d79e3fd1b.js" crossorigin="anonymous"></script>
+    <script src="script/apply.js"></script>
+    <title>Apply | CTS</title>
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+            <img src="images/header_logo.svg" alt="logo">
+        </a>
+        <nav>
+            <a class="blue-t" href="index.html">Home</a>
+            <a href="jobs.html">Jobs</a>
+            <a href="apply.html">Apply</a>
+            <a href="about.html">About</a>
+            <a href="enhancements.html">Enhancements</a>
+            <a href="enhancements2.html">Enhancements2</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <div class="wrap">
+                <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="POST" id="ApplyForm">
+                    <div class="form-containor">
+
+                        <div class="full">
+                            <label>Job reference number</label>
+                            <input id="Ref" name="Ref" readonly="true" type="text" placeholder="CTS###">
+                            <span class="error">*You must have to fill this field </span>
+                        </div>
+                        <div class="group-h">
+                            <div class="group-v">
+                                <label>First Name</label>
+                                <input id="First_Name" type="text" name="Name" maxlength="20" placeholder="John">
+                                <span class="error">*Requiered(Fist name must a string)</span>
+                            </div>
+                            <div class="group-v">
+                                <label>Last Name</label>
+                                <input id="Last_Name" type="text" name="Last Name" maxlength="20" placeholder="Doel">
+                                <span class="error">*You must have to fill this field </span>
+                            </div>
+                        </div>
+                        <div class="group-h">
+                            <div class="group-v">
+                                <label>Date of Birth Day</label>
+                                <input id="DOB" type="date" name="DOB">
+                                <span class="error">*You must have to fill this </span>
+                            </div>
+                            <div class="group-v selection">
+                                <label>Gender</label>
+                                <div class="group-h">
+                                    <div class="group">
+                                        <input id="male" type="radio" name="Gender" value="male">
+                                        <label>Male</label>
+                                    </div>
+                                    <div class="group">
+                                        <input id="female" type="radio" name="Gender" value="female">
+                                        <label>Female</label>
+                                        <span class="error">*You must have to fill this </span>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="full">
+                            <label>Address</label>
+                            <input id="Address" name="Address" type="text" maxlength="40"
+                                placeholder="NCHS, Colombo, Sri Lanka">
+                            <span class="error">*You must have to fill this </span>
+                        </div>
+                        <div class="group-h">
+                            <div class="group-v">
+                                <label>Town</label>
+                                <input id="Town" name="Town" type="text" maxlength="40" placeholder="Galle">
+                            </div>
+                            <div class="group-v selection">
+                                <label>State</label>
+                                <div class="group-h">
+                                    <select name="State" id="State">
+                                        <option value="VIC">VIC</option>
+                                        <option value="NSW">NSW</option>
+                                        <option value="QLD">QLD</option>
+                                        <option value="NT">NT</option>
+                                        <option value="WA">WA</option>
+                                        <option value="SA">SA</option>
+                                        <option value="TAS">TAS</option>
+                                        <option value="ACT">ACT</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="group-h">
+                            <div class="group-v">
+                                <label>Post Code</label>
+                                <input id="post_code" name="Post Code" type="number" maxlength="20" placeholder="12345">
+                                <span class="error">*Invalid post code </span>
+                            </div>
+                            <div class="group-v">
+                                <label>Email</label>
+                                <input id="Mail" name="Mail" type="email">
+                                <span class="error">*You must have to fill this </span>
+                            </div>
+                        </div>
+                        <div class="group-h">
+                            <div class="group-v">
+                                <label>Phone number</label>
+                                <input id="telephone" type="tel" name="Phone Number" minlength="8" maxlength="12">
+                                <span class="error">*Invalid phone number</span>
+                            </div>
+
+                        </div>
+                        <div class="group-v full">
+                            <div class="group-v selection">
+                                <label>State</label>
+                                <div class="group-h">
+                                    <div class="group">
+                                        <input id="skill1" type="checkbox" name="Skills" value="Marketing">
+                                        <label>Marketing</label>
+                                    </div>
+                                    <div class="group">
+                                        <input id="skill2" type="checkbox" name="Skills" value="Fabric">
+                                        <label>Fabric Designing</label>
+                                    </div>
+                                    <div class="group">
+                                        <input id="skill3" type="checkbox" name="Skills" value="Costume">
+                                        <label>Costume Designing</label>
+                                    </div>
+                                    <div class="group">
+                                        <input id="skill4" type="checkbox" name="Skills" onclick="OtherSkills()">
+                                        <label>Other skill</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="group-v full" id="other_skills">
+                                <!-- <label>Other Skills</label> -->
+                                <textarea name="Other Skills" placeholder="Other Skills"></textarea>
+                                <span class="error">*You must have to fill this field </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="group-h full">
+                        <button type="submit" class="icon_btn red-b">
+                            Submit
+                            <i class="fa-solid fa-thumbs-up"></i>
+                        </button>
+                        <button type="reset" class="icon_btn blue-b">
+                            Reset
+                            <i class="fa-solid fa-thumbs-up"></i>
+                        </button>
+                    </div>
+
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="group-v">
+                <img src="images/footer_logo.svg" alt="footer_logo">
+                <h1>Yasiru Lokesha</h1>
+                <h3><a href="mailto:104060309@student.swin.edu.au">104060309@student.swin.edu.au</a></h3>
+                <h3><a href="mailto:1yasirulokesha01@gmail.com">yasirlokesha01@gmail.com</a></h3>
+            </div>
+            <div class="group-v">
+                <div class="group-h">
+                    <a href="https://www.facebook.com/yasiru.lokesha.9/" target="_blank"><i
+                            class="fa fa-facebook-square blue-t" aria-hidden="true"></i></a>
+                    <a href="https://www.instagram.com/yasiru_lokesha/" target="_blank"><i
+                            class="fa fa-instagram blue-t" aria-hidden="true"></i></a>
+                    <a href="https://www.linkedin.com/in/yasirulokesha/" target="_blank"><i
+                            class="fa fa-linkedin-square blue-t" aria-hidden="true"></i></a>
+                    <a href="https://dribbble.com/yasirulokesha" target="_blank"><i class="fa fa-dribbble blue-t"
+                            aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+    <span id="copyright">
+        Yasiru Lokesha | 2022 | COS10024 | Assignment 1
+    </span>
+
+</body>
+
+</html>
