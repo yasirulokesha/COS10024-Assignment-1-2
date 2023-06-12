@@ -1,4 +1,3 @@
-
 function numSpinner(textWrapper, text, duration, frameRate) {
 
     const frameCount = duration * frameRate,
